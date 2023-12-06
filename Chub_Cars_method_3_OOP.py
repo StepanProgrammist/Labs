@@ -20,8 +20,8 @@ def df(obj):
             test=1
     return res
 
-def addcar(nom1,pro1,mod1,dvig1,dver1,far1):
-    return [[nom1, pro1, mod1, dvig1, dver1, far1]]
+def addcar(nom1,pro1,mod1,dvig1,dver1,far1,m1,speed1):
+    return [[nom1, pro1, mod1, dvig1, dver1, far1,m1,speed1]]
 
 if __name__ == "__main__": 
     a = 0
@@ -93,7 +93,9 @@ if __name__ == "__main__":
             dvig = input("Введите двигатель: ")
             dver = df('d')
             far = df('f')
-            cars += addcar(nom,pro,mod,dvig,dver,far)
+            m = input("Введите массу автомобиля кг: ")
+            speed = input("Введите максимальную скорость км/ч: ")
+            cars += addcar(nom,pro,mod,dvig,dver,far,m,speed)
             f.write('\n' + ' '.join(cars[-1]))
         elif a == '3':
             break
